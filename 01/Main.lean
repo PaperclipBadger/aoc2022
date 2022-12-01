@@ -12,7 +12,7 @@ def mostCalories (elves: List (List Int)) : Int :=
 
 def topThree (elves : List (List Int)) : Int :=
   match sort (.>.) (List.map (List.foldl (.+.) 0) elves) with
-  | a :: b :: c :: xs => a + b + c
+  | a :: b :: c :: _ => a + b + c
   | _ => 0
 
 def parseInput (file : String) : List (List Int) :=
